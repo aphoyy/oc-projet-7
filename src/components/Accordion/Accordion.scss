@@ -1,0 +1,39 @@
+.accordion-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    .accordion-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FF6060;
+        border-radius: 5px;
+        padding: 10px 15px 8px 15px;
+        h3 {
+            font-weight: 700;
+        }
+        .arrow {
+            transition: all 380ms;
+            &.active {
+                transform: rotate(-0.5turn);
+            }
+        }
+    }
+    .accordion-content {
+        color: black;
+        background-color: #F6F6F6;
+        border-radius: 0 0 5px 5px;
+        //Animation
+        padding: 0 20px;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: all 380ms ease-in-out;
+        &.active {
+            grid-template-rows: 1fr;
+            padding: 20px 20px 20px 20px;
+        }
+    }
+    .accordion-content > div {
+        overflow: hidden;
+    }
+}
