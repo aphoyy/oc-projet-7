@@ -7,7 +7,10 @@ function About() {
         <>
             <Header />
             <main>
-                <Banner />
+                <Banner 
+                    src="banner-img-2.png"
+                    brightness="brightness-70"
+                />
             </main>
             <Footer />
         </>

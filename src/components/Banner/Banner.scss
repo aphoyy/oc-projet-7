@@ -11,6 +11,12 @@
         border-radius: 25px;
         z-index: -1;
         object-fit: cover;
-        filter: brightness(40%);
     }   
+    .brightness-70 {
+        filter: brightness(70%);
+    } 
+    .brightness-40 {
+        filter: brightness(40%);
+    }
 }
+

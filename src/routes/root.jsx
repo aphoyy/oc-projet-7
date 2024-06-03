@@ -8,7 +8,11 @@ function Root() {
         <>
             <Header />
             <main>
-                <Banner />
+                <Banner 
+                    title="Chez vous, partout et ailleurs"
+                    src="banner-img-1.png"
+                    brightness="brightness-40"
+                />
                 <Gallery />
             </main>
             <Footer />

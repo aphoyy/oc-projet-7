@@ -1,10 +1,14 @@
 import './Banner.scss';
 
-function Banner() {
+function Banner({ title, src, brightness }) {
     return (
         <div className="banner">
-            <img src="src/assets/banner-img.png" alt="Landscape photo" />
-            <h1>Chez vous, partout et ailleurs</h1>
+            <img 
+                src={"src/assets/" + src}
+                alt="Landscape photo"
+                className={brightness}
+            />
+            {typeof title !== "undefined" ? <h1>{title}</h1> : null} 
         </div>
     );
 }
