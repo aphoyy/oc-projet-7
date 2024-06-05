@@ -6,12 +6,12 @@ import Footer from '../components/Footer/Footer';
 function Root() {
     return (
         <>
-            <Header />
+            <Header selected={"home"} />
             <main>
-                <Banner 
+                <Banner
+                    className="home"
                     title="Chez vous, partout et ailleurs"
                     src="banner-img-1.png"
-                    brightness="brightness-40"
                 />
                 <Gallery />
             </main>

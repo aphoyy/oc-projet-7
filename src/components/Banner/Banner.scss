@@ -1,9 +1,9 @@
+@use '../../variables';
+
 .banner {
+    @include variables.flex-center;
     position: relative;
     height: 223px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 43px;
     img {
         position: absolute;
@@ -12,12 +12,15 @@
         border-radius: 25px;
         z-index: -1;
         object-fit: cover;
-    }   
-    .brightness-70 {
-        filter: brightness(70%);
-    } 
-    .brightness-40 {
-        filter: brightness(40%);
+        &.home {
+            filter: brightness(40%);
+        }
+        &.about {
+            filter: brightness(70%);
+        }
+        &.housing {
+            
+        }
     }
 }
 

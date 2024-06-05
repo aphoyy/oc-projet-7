@@ -1,5 +1,7 @@
+@use '../../variables';
+
 .footer {
-    background-color: black;
+    background-color: variables.$black;
     text-align: center;
     padding: 29px 0;
     img {

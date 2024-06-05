@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/root';
 import About from './routes/about';
+import Housing from './routes/housing';
 import ErrorPage from './routes/error-page';
 
 const router = createBrowserRouter([
@@ -15,6 +16,14 @@ const router = createBrowserRouter([
     {
         path: "about",
         element: <About />,
+    },
+    {
+        path: "housing/:id",
+        element: <Housing />,
+    },
+    {
+        path: "/error",
+        element: <ErrorPage />,
     },
 ]);
 

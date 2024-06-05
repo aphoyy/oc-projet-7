@@ -1,12 +1,12 @@
 import './Banner.scss';
 
-function Banner({ title, src, brightness }) {
+function Banner({ className, title, src,  }) {
     return (
         <div className="banner">
             <img 
+                className={className}
                 src={"src/assets/" + src}
                 alt="Landscape photo"
-                className={brightness}
             />
             {typeof title !== "undefined" ? <h1>{title}</h1> : null} 
         </div>

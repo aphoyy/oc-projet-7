@@ -6,11 +6,11 @@ import Accordion from '../components/Accordion/Accordion';
 function About() {
     return (
         <>
-            <Header />
+            <Header selected={"about"} />
             <main className="about">
-                <Banner 
+                <Banner
+                    className={"about"}
                     src="banner-img-2.png"
-                    brightness="brightness-70"
                 />
                 <Accordion
                     title="Fiabilité"

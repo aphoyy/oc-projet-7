@@ -1,0 +1,20 @@
+$main-color: #FF6060;
+$main-background-color: #F6F6F6;
+$white: #ffffff;
+$black: #222222;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin margin-center {
+    margin: 0 auto;
+}

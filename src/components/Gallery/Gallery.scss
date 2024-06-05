@@ -1,11 +1,13 @@
+@use '../../variables';
+
 .gallery {
     padding: 50px;
-    background-color: #F6F6F6;
+    background-color: variables.$main-background-color;
     border-radius: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 30%);
+    grid-template-columns: repeat(auto-fill, 31%);
     justify-content: space-between;
-    grid-gap: 50px 0;
+    grid-gap: 45px 0;
     .card {
         position: relative;
         aspect-ratio: 1 / 1;
@@ -18,10 +20,9 @@
         h4 {
             font-weight: 700;
             width: 75%;
+            position: absolute;
             bottom: 20px;
             left: 20px;
-            position: absolute;
-            z-index: 2;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.637);
         }
     }
