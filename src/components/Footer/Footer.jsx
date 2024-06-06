@@ -1,6 +1,6 @@
 import './Footer.scss';
 
-function Footer() {
+export function Footer() {
     return (
         <footer className="footer">
             <img src="/src/assets/kasa-logo-white.png" alt="Kasa logo" />
@@ -8,5 +8,3 @@ function Footer() {
         </footer>
     );
 }
-
-export default Footer;

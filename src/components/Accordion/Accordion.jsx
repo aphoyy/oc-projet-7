@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Accordion.scss';
 
-function Accordion({ title, text }) {
+export function Accordion({ title, text }) {
     const [isActive, setActive] = useState(false);
 
     function handleToggle() {
@@ -35,5 +35,3 @@ function Accordion({ title, text }) {
         </div>
     );
 }
-
-export default Accordion;

@@ -1,18 +1,17 @@
-import Header from '../components/Header/Header';
-import Accordion from '../components/Accordion/Accordion';
-import Footer from '../components/Footer/Footer';
+import { Header, Banner, Accordion, Rating, Footer } from '../components';
 import data from '../datas/logements.json';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Housing() {
+    const [picture, setPicture] = useState(0)
+
     const navigate = useNavigate();
     const location = useLocation();
     const id = location.state
-
     useEffect(() => {
         if (id === null) {
-            navigate('/');
+            navigate('/not-found');
         }
     })
 
@@ -25,36 +24,13 @@ function Housing() {
                 housingIndex = i;
             }
         }
-
         item = data[housingIndex];
     }
-
-    let rating = [];
-    for (let i = 1; i <= 5; i++) {
-        if (i > item["rating"]) {
-            rating.push(
-                <img
-                    key={"rating" + i}
-                    src="/src/assets/star-inactive.png"
-                    alt="Empty star"
-                    className="star-inactive"
-                />)
-        } else {
-            rating.push(
-                <img
-                    key={"rating" + i}
-                    src="/src/assets/star-active.png"
-                    alt="Colored star"
-                    className="star-active"
-                />)
-        }
-    }
-
     return (
         <>
             <Header />
             <main className="housing">
-                <img src={item["cover"]} />
+                <Banner src={item["cover"]} className={"housing"} />
                 <div className="info">
                     <div className="housing">
                         <h1>{item["title"]}</h1>
@@ -67,10 +43,13 @@ function Housing() {
                     </div>
                     <div>
                         <div className="host">
-                            <h4>{item["host"]["name"]}</h4>
+                            <h4>
+                                {item["host"]["name"].split(' ')[0]}
+                                <span> {item["host"]["name"].split(' ')[1]}</span>
+                            </h4>
                             <img src={item["host"]["picture"]} alt={item["host"]["name"]} />
                         </div>
-                        <div className="rating">{rating}</div>
+                        <Rating itemRating={item["rating"]} />
                     </div>
                 </div>
                 <div className="row">

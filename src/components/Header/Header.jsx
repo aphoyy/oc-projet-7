@@ -1,6 +1,6 @@
 import './Header.scss';
 
-function Header({ selected }) {
+export function Header({ selected }) {
     return (
         <header className="header">
             <img src="/src/assets/kasa-logo-colored.png" alt="Kasa logo" />
@@ -21,5 +21,3 @@ function Header({ selected }) {
         </header>
     );
 }
-
-export default Header;

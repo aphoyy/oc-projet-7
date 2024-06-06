@@ -2,7 +2,7 @@ import './Gallery.scss';
 import data from '../../datas/logements.json';
 import { useNavigate } from 'react-router-dom';
 
-function Gallery() {
+export function Gallery() {
     const navigate = useNavigate("/housing")
     function handleClick(id) {
         navigate("/housing/" + id, { state: { Housing: id } })
@@ -19,5 +19,3 @@ function Gallery() {
         </div>
     );
 }
-
-export default Gallery;

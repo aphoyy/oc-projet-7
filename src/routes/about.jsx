@@ -1,7 +1,4 @@
-import Header from '../components/Header/Header';
-import Banner from '../components/Banner/Banner';
-import Footer from '../components/Footer/Footer';
-import Accordion from '../components/Accordion/Accordion';
+import { Header, Banner, Footer, Accordion }  from '../components';
 
 function About() {
     return (
