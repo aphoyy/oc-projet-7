@@ -73,7 +73,8 @@ main {
 
 .housing {
     .row {
-        @include variables.flex-between;
+        display: flex;
+        justify-content: space-between;
         & > div {
             width: 46%;
             margin: 0;

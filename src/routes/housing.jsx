@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Housing() {
-    const [picture, setPicture] = useState(0)
+    // const [picture, setPicture] = useState(0)
 
     const navigate = useNavigate();
     const location = useLocation();
