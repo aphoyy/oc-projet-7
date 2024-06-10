@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Housing() {
-    // const [picture, setPicture] = useState(0)
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,11 +25,15 @@ function Housing() {
         }
         item = data[housingIndex];
     }
+
     return (
         <>
             <Header />
             <main className="housing">
-                <Banner src={item["cover"]} className={"housing"} />
+                <Banner
+                    slides={item["pictures"]}
+                    className={"housing"}
+                />
                 <div className="info">
                     <div className="housing">
                         <h1>{item["title"]}</h1>

@@ -1,15 +1,47 @@
 import './Banner.scss';
+import { useState } from 'react';
 
-export function Banner({ className, title, src }) {
+export function Banner({ className, title, src, slides }) {
+    const [picture, setPicture] = useState(0)
+
+    let slidesMax
+    if (slides !== undefined) {
+        slidesMax = slides.length - 1;
+    }
+
     if (className === "home" || className === "about" ) {
         src = "src/assets/" + src;
     }
 
     let arrowLeft;
     let arrowRight;
-    if (className === "housing") {
-        arrowLeft = <img src="/src/assets/arrow-left.png" className="arrow-left arrow" />
-        arrowRight = <img src="/src/assets/arrow-right.png" className="arrow-right arrow" />
+    if (className === "housing" && slidesMax !== 0) {
+        arrowLeft = <img 
+            src="/src/assets/arrow-left.png"
+            className="arrow-left arrow"
+            onClick={()  => arrowClick("left")}
+        />
+        arrowRight = <img
+            src="/src/assets/arrow-right.png"
+            className="arrow-right arrow"
+            onClick={()  => arrowClick("right")}
+        />
+    }
+
+    function arrowClick(direction) {
+        if (direction === "left") {
+            if (picture === 0) {
+                setPicture(slidesMax);
+            } else {
+                setPicture(picture - 1);
+            }
+        } else if (direction === "right") {
+            if (picture === slidesMax) {
+                setPicture(0);
+            } else {
+                setPicture(picture + 1);
+            }
+        }
     }
 
     return (
@@ -18,7 +50,7 @@ export function Banner({ className, title, src }) {
         >
             <img 
                 className={"banner-img " + className}
-                src={src}
+                src={className === "housing" ? slides[picture] : src}
                 alt="Landscape photo"
             />
             {arrowLeft}
