@@ -5,6 +5,9 @@
     position: relative;
     height: 223px;
     margin-bottom: 43px;
+    h1 {
+        margin: 16px;
+    }
     .banner-img {
         position: absolute;
         width: 100%;
@@ -21,6 +24,7 @@
     }
     &.housing {
         height: 415px;
+        margin-bottom: 0;
     }
     .arrow {
         position: absolute;
@@ -31,5 +35,19 @@
             right: 0;
         }
     }
+    .page-number {
+        position: absolute;
+        bottom: 25px;
+        color: variables.$white;
+    }
 }
 
+@media (max-width: variables.$mobile-maxwidth) {
+    .banner {
+        height: 111px;
+        margin-bottom: 22px;
+        h1 {
+            font-size: 24px;
+        }
+    }
+}

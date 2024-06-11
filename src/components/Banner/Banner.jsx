@@ -15,6 +15,7 @@ export function Banner({ className, title, src, slides }) {
 
     let arrowLeft;
     let arrowRight;
+    let pageNumber;
     if (className === "housing" && slidesMax !== 0) {
         arrowLeft = <img 
             src="/src/assets/arrow-left.png"
@@ -26,6 +27,9 @@ export function Banner({ className, title, src, slides }) {
             className="arrow-right arrow"
             onClick={()  => arrowClick("right")}
         />
+        pageNumber = <p className="page-number">
+            {picture + 1} / {slidesMax + 1}
+        </p>
     }
 
     function arrowClick(direction) {
@@ -55,6 +59,7 @@ export function Banner({ className, title, src, slides }) {
             />
             {arrowLeft}
             {arrowRight}
+            {pageNumber}
             {typeof title !== "undefined" ? <h1>{title}</h1> : null} 
         </div>
     );

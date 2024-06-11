@@ -44,3 +44,15 @@
         margin-top: 3px;
     }
 }
+
+@media (max-width: variables.$mobile-maxwidth) {
+    .accordion-wrapper {
+        width: 100%;
+        .accordion-button h3 {
+            font-size: 13px;
+        }
+        .accordion-content *  {
+            font-size: 12px;
+        }
+    }
+}

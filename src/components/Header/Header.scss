@@ -22,3 +22,21 @@
         }
     }
 }
+
+@media (max-width: variables.$mobile-maxwidth) {
+    .header {
+        margin: 20px 20px 0 20px;
+        img {
+            width: 145px;
+            height: 47px;
+        }
+        nav {
+            width: 140px;
+            a {
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

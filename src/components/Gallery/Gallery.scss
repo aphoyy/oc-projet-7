@@ -27,3 +27,16 @@
         }
     }
 }
+
+@media (max-width: variables.$mobile-maxwidth) {
+    .gallery {
+        grid-template-columns: 100%;
+        padding: 0;
+        grid-gap: 20px;
+        background-color: unset;
+        .card {
+            height: 225px;
+            aspect-ratio: auto;
+        }
+    }
+}
