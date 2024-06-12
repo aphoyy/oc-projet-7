@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer className="footer">
             <img src="/src/assets/kasa-logo-white.png" alt="Kasa logo" />
-            <h3>© 2020 Kasa. All rights reserved</h3>
+            <h2>© 2020 Kasa. All rights reserved</h2>
         </footer>
     );
 }

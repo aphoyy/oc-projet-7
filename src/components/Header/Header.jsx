@@ -9,13 +9,13 @@ export function Header({ selected }) {
                     href="/"
                     className={selected == "home" ? "active" : ""}
                 >
-                    Accueil
+                    <h2>Accueil</h2>
                 </a>
                 <a
                     href="/about"
                     className={selected == "about" ? "active" : ""}
                 >
-                    A propos
+                    <h2>A propos</h2>
                 </a>
             </nav>
         </header>

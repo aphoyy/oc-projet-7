@@ -60,7 +60,7 @@ export function Banner({ className, title, src, slides }) {
             {arrowLeft}
             {arrowRight}
             {pageNumber}
-            {typeof title !== "undefined" ? <h1>{title}</h1> : null} 
+            {typeof title !== "undefined" ? <h1 className="banner-title">{title}</h1> : null} 
         </div>
     );
 }

@@ -1,6 +1,6 @@
 @use '../../variables';
 
-.accordion-wrapper {
+.accordion {
     width: 80%;
     margin: 0 auto 30px auto;
     .accordion-button {
@@ -31,28 +31,43 @@
             grid-template-rows: 1fr;
             padding: 20px 20px 20px 20px;
         }
-    }
-    .accordion-content > div {
-        overflow: hidden;
-    }
-    li {
-        font-size: 18px;
-        font-weight: 400;
-        list-style-type: none;
-    }
-    li ~ li {
-        margin-top: 3px;
+        & > div {
+            overflow: hidden;
+        }
+        li {
+            font-size: 1rem;
+            font-weight: 400;
+            list-style-type: none;
+        }
+        li ~ li {
+            margin-top: 3px;
+        }
     }
 }
 
+.housing .accordion {
+    width: 46%;
+    margin: 0;
+}
+
 @media (max-width: variables.$mobile-maxwidth) {
-    .accordion-wrapper {
+    .accordion, .housing .accordion {
         width: 100%;
-        .accordion-button h3 {
-            font-size: 13px;
+        .accordion-button {
+            padding: 5px 15px;
+            h3 {
+                font-size: 0.722rem;
+            }
+            .arrow {
+                width: 20px;
+            }
         }
-        .accordion-content *  {
-            font-size: 12px;
+        .accordion-content {
+            margin-bottom: 20px;
+            li {
+                font-size: 0.667rem;
+            }
         }
     }
+    
 }

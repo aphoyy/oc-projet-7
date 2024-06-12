@@ -9,6 +9,7 @@ export function Accordion({ title, text }) {
     }
     
     const content = [];
+    // Push a list or text
     if (typeof text == "string") {
         content.push(<p key="accordion-text">{text}</p>);
     } else if (typeof text == "object") {
@@ -17,7 +18,7 @@ export function Accordion({ title, text }) {
         ));
     }
     return (
-        <div className={isActive ? "accordion-wrapper active" : "accordion-wrapper"}>
+        <div className={isActive ? "accordion active" : "accordion"}>
             <div className="accordion-button">
                 <h3>{title}</h3>
                 <img

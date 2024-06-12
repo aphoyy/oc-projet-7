@@ -8,6 +8,10 @@
     h1 {
         margin: 16px;
     }
+    .banner-title {
+        font-size: 2.667rem;
+        font-weight: 700;
+    }
     .banner-img {
         position: absolute;
         width: 100%;
@@ -46,8 +50,17 @@
     .banner {
         height: 111px;
         margin-bottom: 22px;
-        h1 {
-            font-size: 24px;
+        &.housing {
+            height: 255px;
+        }
+        .banner-title {
+            font-size: 1.333rem;
+        }
+        .arrow {
+            width: 35px;
+        }
+        .page-number {
+            display: none;
         }
     }
 }

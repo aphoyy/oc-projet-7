@@ -1,4 +1,21 @@
+@use '../../variables';
+
 .rating {
     margin: 20px 0;
     display: flex;
+    .star-active, .star-inactive {
+        width: 36px;
+        height: 36px;
+    }
 }
+
+@media (max-width: variables.$mobile-maxwidth) {
+    .rating {
+        margin: 16px 0;
+        .star-active, .star-inactive {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+

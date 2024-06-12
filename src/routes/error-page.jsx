@@ -11,7 +11,9 @@ function ErrorPage() {
             <main className="error">
                 <h1>404</h1>
                 <h2>Oups! La page que vous demandez n&apos;existe pas.</h2>
-                <a href="/">Retourner sur la page d&apos;accueil</a>
+                <a href="/">
+                    <h3>Retourner sur la page d&apos;accueil</h3>
+                </a>
             </main>
             <Footer />
         </>

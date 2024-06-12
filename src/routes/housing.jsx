@@ -35,21 +35,21 @@ function Housing() {
                     className={"housing"}
                 />
                 <div className="info">
-                    <div className="housing">
+                    <div className="info-housing">
                         <h1>{item["title"]}</h1>
-                        <h4>{item["location"]}</h4>
+                        <h3>{item["location"]}</h3>
                         <div className="tags">
                             {item["tags"].map((item, index) => (
                                 <div key={item + index}>{item}</div>
                             ))}
                         </div>
                     </div>
-                    <div>
+                    <div className="info-host">
                         <div className="host">
-                            <h4>
+                            <h3>
                                 {item["host"]["name"].split(' ')[0]}
                                 <span> {item["host"]["name"].split(' ')[1]}</span>
-                            </h4>
+                            </h3>
                             <img src={item["host"]["picture"]} alt={item["host"]["name"]} />
                         </div>
                         <Rating itemRating={item["rating"]} />

@@ -17,7 +17,7 @@
             border-radius: 10px;
             object-fit: cover;
         }
-        h4 {
+        h3 {
             font-weight: 700;
             width: 75%;
             position: absolute;
@@ -30,13 +30,16 @@
 
 @media (max-width: variables.$mobile-maxwidth) {
     .gallery {
-        grid-template-columns: 100%;
         padding: 0;
-        grid-gap: 20px;
         background-color: unset;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
         .card {
             height: 225px;
             aspect-ratio: auto;
+            h3 {
+                font-size: 1rem;
+            }
         }
     }
 }

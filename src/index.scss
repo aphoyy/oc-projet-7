@@ -1,3 +1,4 @@
+/*#region General*/
 @use './variables';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -13,73 +14,103 @@ html {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px; // 1rem = 18px
     color: variables.$white;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 700; // Bold
 }
 
 h2 {
-    font-size: 36px;
-    font-weight: 500;
+    font-size: 1.333rem;
+    font-weight: 500; // Medium
 }
 
 h3 {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-h4 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500; // Medium
 }
 
 p {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-a {
-    color: variables.$black;
+    font-size: 1rem;
+    font-weight: 400; // Regular
 }
 
 main {
     margin: 50px 100px;
 }
 
+@media (max-width: variables.$mobile-maxwidth) {
+    h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.667rem;
+    }
+    h3 {
+        font-size: 0.778rem;
+    }
+    p {
+        font-size: 0.667rem;
+    }
+    main {
+        margin: 27px 20px;
+    }
+}
+/*#endregion*/
+
+/*#region Error Page*/
 .error {
     text-align: center;
     h1 {
         font-size: 288px;
-        margin: 139px 0;
         color: variables.$main-color;
     }
     h2 {
         color: variables.$main-color;
     }
-    a {
-        display: block;
+    h3 {
+        color: variables.$black;
+    }
+    h1, h3 {
         margin: 139px 0;
     }
 }
 
+@media (max-width: variables.$mobile-maxwidth) {
+    .error {
+        h1 {
+            font-size: 96px;
+            margin: 113px 0;
+        }
+        h1, h3 {
+            margin: 113px 0;
+        }
+    }
+}
+/*#endregion*/
+
+/*#region About Page*/
 .about {
     margin: 38px 100px;
 }
 
+@media (max-width: variables.$mobile-maxwidth) {
+    .about {
+        margin: 19px 20px;
+    }
+}
+/*#endregion*/
+
+/*#region Housing Page*/
 .housing {
     .row {
         display: flex;
         justify-content: space-between;
-        & > div {
-            width: 46%;
-            margin: 0;
-        }
     }
-    .housing {
+    .info-housing {
         color: variables.$black;
         h1 {
             font-size: 36px;
@@ -108,7 +139,7 @@ main {
         display: flex;
         justify-content: end;
         align-items: center;
-        h4 {
+        h3 {
             width: 60%;
             text-align: right;
             color: variables.$main-color;
@@ -123,21 +154,50 @@ main {
             border-radius: 100px;
         }
     }
-    .accordion-button h3 {
-        font-size: 18px;
-    }
 }
-
-.star-active, .star-inactive {
-    width: 36px;
-    height: 36px;
-}
+/*#endregion*/
 
 @media (max-width: variables.$mobile-maxwidth) {
-    main {
-        margin: 27px 20px;
-        &.about {
-            margin: 19px 20px;
+    .housing {
+        .info {
+            flex-direction: column;
+            margin-top: 15px;
+        }
+        .info-housing {
+            width: 100%;
+            h1 {
+                width: 72%;
+                font-size: 19px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+        }
+        .info-host {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            h4 {
+                font-size: 12px;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .tags {
+            margin: 10px 0 0 0;
+            div {
+                font-size: 10px;
+                padding: 3px 20px;
+                border-radius: 5px;
+            }
+        }
+        .row {
+            display: block;
         }
     }
 }
