@@ -4,16 +4,17 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Housing() {
-
+    // Move to error page if id is not found
     const navigate = useNavigate();
     const location = useLocation();
     const id = location.state
     useEffect(() => {
         if (id === null) {
-            navigate('/not-found');
+            navigate('/404');
         }
     })
 
+    // Get appartment information
     let item = data[0];
     if (id !== null) {
         const locationHousing = id["Housing"];

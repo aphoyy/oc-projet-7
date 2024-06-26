@@ -125,6 +125,7 @@ main {
     .tags {
         margin: 27px 0 24px 0;
         display: flex;
+        align-items: center;
         gap: 10px;
         div {
             font-size: 14px;
@@ -155,7 +156,6 @@ main {
         }
     }
 }
-/*#endregion*/
 
 @media (max-width: variables.$mobile-maxwidth) {
     .housing {
@@ -201,3 +201,14 @@ main {
         }
     }
 }
+
+@media (max-width: 350px) {
+    .housing {
+        .tags {
+            div {
+                padding: 3px 10px;
+            }
+        }
+    }
+}
+/*#endregion*/

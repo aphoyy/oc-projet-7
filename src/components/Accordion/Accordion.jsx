@@ -9,13 +9,13 @@ export function Accordion({ title, text }) {
     }
     
     const content = [];
-    // Push a list or text
+    // Push a list or text in accordion content
     if (typeof text == "string") {
         content.push(<p key="accordion-text">{text}</p>);
     } else if (typeof text == "object") {
-        text.map((item, index) => (
+        text.map((item, index) =>
             content.push(<li key={item + index}>{item}</li>)
-        ));
+        );
     }
     return (
         <div className={isActive ? "accordion active" : "accordion"}>
