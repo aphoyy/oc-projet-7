@@ -1,30 +1,31 @@
 import { Header, Banner, Accordion, Rating, Footer } from '../components';
 import data from '../datas/logements.json';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Housing() {
-    // Move to error page if id is not found
+    // Get id from params
+    const id = useParams().id;
+
+    // Get list of all valid id
+    const validId = []
+    for (let i = 0; i < data.length; i++) {
+        validId.push(data[i]["id"]);
+    }
+
+    // Check if id is valid else go to error page
     const navigate = useNavigate();
-    const location = useLocation();
-    const id = location.state
     useEffect(() => {
-        if (id === null) {
+        if (id === null || validId.includes(id) === false) {
             navigate('/404');
         }
     })
 
     // Get appartment information
     let item = data[0];
-    if (id !== null) {
-        const locationHousing = id["Housing"];
-        let housingIndex;
-        for (let i = 0; i < data.length; i++) {
-            if (data[i]["id"] === locationHousing) {
-                housingIndex = i;
-            }
-        }
-        item = data[housingIndex];
+    if (id !== null && validId.includes(id) === true) {
+        const index = validId.findIndex((value) => value === id);
+        item = data[index];
     }
 
     return (

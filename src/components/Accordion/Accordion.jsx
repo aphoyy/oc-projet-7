@@ -30,7 +30,7 @@ export function Accordion({ title, text }) {
             </div>
             <div className={isActive ? "accordion-content active" : "accordion-content"}>
                 <div>
-                    {typeof text !== "undefined" ? content : <ul>{content}</ul>}
+                    {typeof text === "string" ? content : <ul>{content}</ul>}
                 </div>
             </div>
         </div>

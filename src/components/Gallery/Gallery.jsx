@@ -3,9 +3,9 @@ import data from '../../datas/logements.json';
 import { useNavigate } from 'react-router-dom';
 
 export function Gallery() {
-    const navigate = useNavigate("/housing")
+    const navigate = useNavigate();
     function handleClick(id) {
-        navigate("/housing/" + id, { state: { Housing: id } })
+        navigate("/housing/" + id);
     }
 
     return (

@@ -5,7 +5,7 @@ export function Banner({ className, title, src, slides }) {
     const [picture, setPicture] = useState(0)
 
     // Set maximum of slides
-    let slidesMax
+    let slidesMax;
     if (slides !== undefined) {
         slidesMax = slides.length - 1;
     }
